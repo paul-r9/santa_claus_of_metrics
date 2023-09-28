@@ -20,4 +20,6 @@ steps:
     jdkArchitectureOption: 'x64'
     publishJUnitResults: true
     testResultsFiles: '**/TEST-*.xml'
+    codeCoverageClassFilesDirectories: 'build/classes/main/'
+    codeCoverageFailIfEmpty: false
     tasks: 'build'
