@@ -16,7 +16,7 @@ public class GildedRoseTest {
     public static final String BACKSTAGE_PASS = "Backstage passes to a TAFKAL80ETC concert";
 
     @Test
-    @Disabled
+//    @Disabled
     void AgedBrie_QualityIncreases_EvenAfterSellInDate() {
         GildedRose sut = new GildedRose(createItemArray("Aged Brie", -1, 20));
 
