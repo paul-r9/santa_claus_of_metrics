@@ -2,6 +2,7 @@ plugins {
   id 'java'
   id 'idea'
   id 'eclipse'
+  id 'jacoco'
 }
 
 repositories {
@@ -47,6 +48,28 @@ task cucumber() {
               '--plugin', 'html:target/cucumber-report.html',
               '--glue', 'com.gildedrose',
               'src/test/resources']
+    }
+  }
+}
+
+jacocoTestCoverageVerification {
+  violationRules {
+    rule {
+      limit {
+        minimum = 0.5
+      }
+    }
+
+    rule {
+      enabled = false
+      element = 'CLASS'
+      includes = ['org.gradle.*']
+
+      limit {
+        counter = 'LINE'
+        value = 'TOTALCOUNT'
+        maximum = 0.3
+      }
     }
   }
 }
