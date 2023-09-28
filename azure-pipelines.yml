@@ -24,3 +24,9 @@ steps:
     codeCoverageClassFilesDirectories: 'build/classes/main/'
     codeCoverageFailIfEmpty: true
     tasks: 'build'
+
+- task: PublishTestResults@2
+  inputs:
+    #testRunner: VSTest
+    testResultsFiles: '**/TEST-*.xml'
+    failTaskOnFailedTests: true
