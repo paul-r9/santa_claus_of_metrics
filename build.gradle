@@ -34,8 +34,6 @@ test {
               "${result.skippedTestCount} skipped"
     }
   }
-
-  ignoreFailures = false
 }
 
 task cucumber() {
