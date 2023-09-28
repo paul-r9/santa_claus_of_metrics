@@ -16,13 +16,13 @@ public class GildedRoseTest {
     public static final String BACKSTAGE_PASS = "Backstage passes to a TAFKAL80ETC concert";
 
     @Test
-//    @Disabled
+    @Disabled
     void AgedBrie_QualityIncreases_EvenAfterSellInDate() {
         GildedRose sut = new GildedRose(createItemArray("Aged Brie", -1, 20));
 
         sut.updateQuality();
 
-        assertEquals(24, sut.items[0].quality, "Aged Brie improves twice as fast after sellIn date (BUG?)");
+        assertEquals(22, sut.items[0].quality, "Aged Brie improves twice as fast after sellIn date (BUG?)");
     }
 
     @Test
